@@ -1,0 +1,23 @@
+package com.homework;
+
+public class Pokemon {
+    private String pokemonName;
+    private String pokemonType;
+
+    public String getPokemonType() {
+        return pokemonType;
+    }
+
+    public void setPokemonType(String pokemonType) {
+        this.pokemonType = pokemonType;
+    }
+
+    public String getPokemonName() {
+        return pokemonName;
+    }
+
+    public void setPokemonName(String pokemonName) {
+        this.pokemonName = pokemonName;
+    }
+
+}
