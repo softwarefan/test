@@ -5,6 +5,13 @@ public class Parent {
     private String parentName;
     private String parentBirthday;
 
+
+    public Parent(String parentName, String parentType) {
+        this.parentName  = parentName;
+        this.parentType = parentType;
+    }
+
+
     public String getParentName() {
         return parentName;
     }
