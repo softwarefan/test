@@ -23,7 +23,7 @@ public class PersonTest {
         while (!"end".equalsIgnoreCase(input)) {
             personKey = inputs[1];
             personExists = persons.containsKey(personKey);
-            switch (inputsp[1].toLowerCase()) {
+            switch (inputs[1].toLowerCase()) {
 
             // spored stringa vav vtoria param ot inputs masiva, sazdavame Person s
             // razlichni atributi
@@ -85,7 +85,7 @@ public class PersonTest {
                 break;
 
             default:
-                System.out.prntln("Nevalidni parametri ot comanden red!!");
+                System.out.println("Nevalidni parametri ot comanden red!!");
                 break;
 
             }
