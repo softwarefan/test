@@ -28,4 +28,9 @@ public class Parent {
         this.parentBirthday = parentBirthday;
     }
 
+
+@Override
+    public String toString() {
+        return this.getParentName() + " " + this.getParentBirthday();
+    }
 }

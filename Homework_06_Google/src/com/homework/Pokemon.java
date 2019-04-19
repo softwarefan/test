@@ -5,7 +5,7 @@ public class Pokemon {
     private String pokemonType;
 
     public Pokemon(String pokemonName, String pokemonType) {
-        this.pokemonName  = pokemonName;
+        this.pokemonName = pokemonName;
         this.pokemonType = pokemonType;
     }
 
@@ -25,4 +25,8 @@ public class Pokemon {
         this.pokemonName = pokemonName;
     }
 
+    @Override
+    public String toString() {
+        return this.getPokemonName() + " " + this.pokemonType();
+    }
 }

@@ -17,7 +17,8 @@ public class PersonTest {
         String personKey = null;
         Company company = null;
         Pokemon pokemon = null;
-        // bezkraen tsikal zachetene ot klaviaturata na danni za person
+        Car car = null;
+        // bezkraen tsikal za chetene ot klaviaturata na danni za person
         // dokato ne vavedem "end" za izhod
         while (!"end".equalsIgnoreCase(input)) {
             personKey = inputs[1];
@@ -66,9 +67,25 @@ public class PersonTest {
                     persons.get(personKey).getChildren().add(child);
                 } else {
                     person = new Person();
-                    person.setPokemon(pokemon);
+                    person.setChildren(child);
                     persons.put(personKey, person);
                 }
+                break;
+
+            case "car":
+
+                car = new Car(inputs[2], inputs[3]);
+                if (personExists) {
+                    persons.get(personKey).setCar(car);
+                } else {
+                    person = new Person();
+                    person.setCar(car);
+                    persons.put(personKey, person);
+                }
+                break;
+
+            default:
+                System.out.prntln("Nevalidni parametri ot comanden red!!");
                 break;
 
             }
@@ -76,7 +93,16 @@ public class PersonTest {
             inputs = input.split(" ");
         }
 
+        // izbor na person za display na dannite mu
+        System.out.println("Vavedete ime na person:");
+        input = scanner.next();
+        if (persons.containsKey(input)) {
+            persons.get(input).toString();
+        } else {
+            System.out.println("Ne e otkrit Person s takova ime!!");
+        }
         scanner.close();
+
     }
 
 }
